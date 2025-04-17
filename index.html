@@ -8,8 +8,8 @@
 </head>
 <body>
   <!-- NUEVA BARRA DE NAVEGACIÓN -->
- <nav class="navbar">
-  <a href="#donar-boton">Donaciones</a> 
+<nav class="navbar">
+  <a href="#donar-boton">Donaciones</a> <!-- Cambia el href al nuevo id -->
   <a href="#faq">Preguntas Frecuentes</a>
   <a href="#comentarios">Comentarios</a>
   <a href="#objetivos">Objetivos</a>
@@ -91,7 +91,7 @@
   <section id="donar">
     <p>(Información del juego en relación al ambiente del video)</p>
   </section>
-<section>
+ <section>
   <button id="donar-boton" class="btn">¿QUIERES CONTRIBUIR DONÁNDONOS?</button>
 </section>
   <section id="contribuciones">
@@ -155,18 +155,17 @@
 </section>
 
   <section><img src="Fotos/Textosdecorativos.svg" alt="Textosdecorativos" id="decoracion2"></section>
-<section>
-  <div id="disqus_thread"></div>
-  <script>
-      (function() {
-      var d = document, s = d.createElement('script');
-      s.src = 'https://https-felipeowenzz-github-io-proyecto-web-grupo-b.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-      })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</section>
+  <section id="disqus_thread">
+    <script>
+        (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://https-felipeowenzz-github-io-proyecto-web-grupo-b.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </section>
 
   <footer>
     <div class="footer-content">
@@ -201,22 +200,22 @@
         }
       });
 
-     <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const navbarLinks = document.querySelectorAll('.navbar a');
-
-    navbarLinks.forEach(link => {
-      link.addEventListener('click', e => {
-        e.preventDefault();
-        const targetId = e.target.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(targetId);
-        if (targetSection) {
-          targetSection.scrollIntoView({
-            behavior: 'smooth',
-            block: 'center' 
-          });
-        }
+      // Scroll suave para la navegación
+      const navbarLinks = document.querySelectorAll(".navbar a");
+      navbarLinks.forEach(link => {
+        link.addEventListener("click", e => {
+          e.preventDefault();
+          const targetId = e.target.getAttribute("href").substring(1);
+          const targetSection = document.getElementById(targetId);
+          if (targetSection) {
+            targetSection.scrollIntoView({
+              behavior: "smooth",
+              block: "center"
+            });
+          }
+        });
       });
     });
-  });
-</script>
+  </script>
+</body>
+</html>
