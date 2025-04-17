@@ -88,27 +88,30 @@ body {
     max-width: 1000px;
 }
 /* Sección de Preguntas Frecuentes (FAQ) */
-/* Sección de Preguntas Frecuentes (FAQ) */
+
+/* Sección de Preguntas Frecuentes (FAQ) - Versión mejorada */
 #faq {
   background-color: rgba(20, 20, 20, 0.95);
   padding: 40px 20px;
   border-radius: 12px;
-  color: whitesmoke;
-  text-align: center;
+  margin: 30px auto;
+  max-width: 1000px;
 }
 
 #faq h2 {
   font-size: 2em;
   color: #ffb347;
   margin-bottom: 30px;
+  text-align: center;
+  width: 100%;
+  display: block;
 }
 
 .faq-container {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  max-width: 800px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .faq-card {
@@ -118,12 +121,7 @@ body {
   border-radius: 12px;
   padding: 0 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-  overflow: hidden;
   transition: all 0.3s ease;
-}
-
-.faq-card[open] {
-  box-shadow: 0 6px 14px rgba(255, 99, 71, 0.4);
 }
 
 .faq-card summary {
@@ -132,18 +130,18 @@ body {
   color: #ff6347;
   font-weight: bold;
   font-size: 1.1em;
-  list-style: none;
   position: relative;
+  list-style: none;
 }
 
-.faq-card summary::marker {
+.faq-card summary::-webkit-details-marker {
   display: none;
 }
 
 .faq-card summary::after {
   content: "▼";
   position: absolute;
-  right: 0;
+  right: 20px;
   transition: transform 0.3s ease;
 }
 
@@ -153,12 +151,11 @@ body {
 
 .faq-card p {
   color: #e0e0e0;
-  padding: 10px 0 20px;
+  padding: 0 0 20px 0;
   margin: 0;
   font-size: 0.95em;
   line-height: 1.5;
 }
-
 
 .gif {
     height: 150px;
