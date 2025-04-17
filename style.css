@@ -1,3 +1,33 @@
+/* ======== NAVBAR NUEVA ======== */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 15px 0;
+  z-index: 9999;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+}
+
+.navbar a {
+  color: #ffb347;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #ff6347;
+  text-shadow: 0 0 10px #ffb347;
+}
+
+/* ======== AJUSTES EXTRA PARA HEADER Y BODY ======== */
+body {
+  padding-top: 70px; 
+}
 
 header {
     height: 450px;
