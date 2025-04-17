@@ -477,3 +477,161 @@ footer {
   color: #fff;
   text-decoration: underline;
 }
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+  /* Ajustes generales */
+  body {
+    background-size: auto;
+  }
+  
+  /* Header y título */
+  header {
+    height: auto;
+    min-height: 300px;
+    background-position: center;
+    padding-bottom: 20px;
+    position: relative;
+  }
+  
+  #Empresalogo {
+    position: static;
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+    max-width: 200px;
+    height: auto;
+    left: auto;
+  }
+  
+  #title-image {
+    height: auto;
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: block;
+    padding: 10px 0;
+  }
+  
+  /* Formulario de login */
+  header form {
+    position: relative;
+    text-align: center;
+    padding: 10px;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.7);
+    margin: 10px;
+    border-radius: 10px;
+  }
+  
+  header form label,
+  header form input,
+  header form button {
+    display: block;
+    width: 90%;
+    margin: 5px auto;
+  }
+  
+  /* Contenedor de música */
+  .container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+  }
+  
+  /* Texto principal */
+  #welcome, #nominado {
+    font-size: 18px;
+    padding: 0 20px;
+    line-height: 1.4;
+  }
+  
+  /* Secciones principales */
+  section {
+    flex-direction: column;
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+  
+  /* Imágenes y contenido */
+  #foto1, #foto2 {
+    float: none;
+    display: block;
+    margin: 0 auto;
+    height: auto;
+    max-width: 100%;
+  }
+  
+  aside {
+    float: none;
+    text-align: center;
+  }
+  
+  .gif {
+    height: auto;
+    max-width: 100%;
+  }
+  
+  /* Video */
+  .video-container iframe {
+    height: 300px;
+  }
+  
+  /* Comentarios */
+  #comentarios-section {
+    padding: 15px 0;
+  }
+  
+  .comentarios-container {
+    padding: 15px;
+  }
+  
+  /* Footer */
+  .footer-content {
+    padding: 0 10px;
+  }
+  
+  .social-icons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .social-icons .icon img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .official-link, .legal-links {
+    width: 100%;
+  }
+  
+  .legal-links {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  /* Botones */
+  .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+
+/* Ajustes adicionales para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  #welcome, #nominado {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+  
+  .video-container iframe {
+    height: 200px;
+  }
+  
+  header form {
+    margin: 5px;
+    padding: 5px;
+  }
+}
