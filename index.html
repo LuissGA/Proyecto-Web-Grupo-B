@@ -1,151 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-<meta charset="UTF-8" />
-<title>Outer Wilds</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Sitio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <form>
-      <label for="usuario">Usuario</label>
-      <input class="input" type="text" name="usuario" id="usuario" placeholder="Usuario" />
-      <label for="contraseña">Contraseña</label>
-      <input class= "input" type="password" name="contraseña" id="contraseña" placeholder="Contraseña" />
-      <button type="submit"> Iniciar Sesión</button>
-    </form>  
-
-    <div class="container">
-      <label>
-        <input class="play-btn" type="checkbox" id="audioControl" title="Toggle background music" aria-label="Toggle background music">
-        <div class="play-icon"></div>
-        <div class="pause-icon"></div>
-      </label>
-      <audio id="backgroundMusic" loop>
-        <source src="Cancion/OuterWilds.mp3" type="audio/mpeg">
-        Tu navegador no soporta el elemento de audio.
-      </audio>
-    </div>
-
-    <img src="Fotos/Empresalogo.png" alt="Empresalogo" id="Empresalogo">
-
-
+    <img id="Empresalogo" src="logo.png" alt="Logo" />
+    <h1>Bienvenido a mi página</h1>
+    <img id="title-image" src="titulo.png" alt="Imagen de título" />
   </header>
-  <main>
-<img src="Fotos/Titulo.png" alt="Titulofoto" id="title-image">
-  <h1 id="welcome">Bienvenido al Sistema Solar de OuterWilds <br>
-    donde podrás explorar libremente un universo completamente nuevo como un Hatchling. 
-    <br>Pero, ¿no es extraño?
-    El tiempo no pasa como debería...</h1>
-    <section> 
-      <div><h1>Puntos fuertes</h1>
-      <ul>
-        <li>texto</li>
-        <li>texto</li>
-        <li>texto</li> 
-        </ul>
-      </div>
 
-    <aside>
-      <img src="Fotos/Foto1.webp" alt="Foto1" id="foto1"/>
-      <div><img src="Gifs/gif1.gif" alt="gif1" class="gif"/></div>
-      
-    </aside >
-  </section>
+  <form>
+    <input type="text" placeholder="Buscar..." />
+    <button type="submit">Buscar</button>
+  </form>
+
   <section>
-    <div>
-    <h1>Mecanicas de juego</h1>
-    <ul>
-      <li>texto</li>
-      <li>texto</li>
-      <li>texto</li>
-    </ul>
-  </div>
-  
     <aside>
-      <img src="Fotos/Foto2.webp" alt="Foto2" id="foto2"/>
-      <div><img src="Gifs/gif2.gif" alt="gif2" class="gif"/></div>
+      <h2>Noticias</h2>
+      <p>¡Contenido interesante aquí!</p>
     </aside>
-  </section>
-  <section><img src="Fotos/Decoración1.png" alt="Decoración1" id="decoracion1"></section>
-  <section>
-    <h1 id="nominado">Ganador del premio a Mejor Juego en los BAFTA Games Awards de 2020 
-      y nombrado Juego del Año 2019 por Giant Bomb, Polygon, Eurogamer y The Guardian.</h1>
-  </section>
-  <section>
-    <div class="video-container">
-      <iframe 
-        width="100%" 
-        height="500"
-        src="https://www.youtube.com/embed/ti-8C6od6ME" 
-        title="Outer Wilds Trailer"
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
-      </iframe>
-      </video>
+    <div id="foto1">
+      <img src="foto1.jpg" alt="Foto 1" />
+    </div>
+    <div id="foto2">
+      <img src="foto2.jpg" alt="Foto 2" />
+    </div>
+    <div class="gif">
+      <img src="animacion.gif" alt="GIF" />
     </div>
   </section>
-  <section><p>(Información del juego en relación al ambiente del video)</p></section>
-  <section><button class="btn">¿ QUIERES CONTRIBUIR DONANDONOS ?</button></section>
-    
-  <section><img src="Fotos/Textosdecorativos.svg" alt="Textosdecorativos" id="decoracion2"></section>
-  <section id="comentarios-section">
-    <div class="comentarios-container">
-      <h2>Foro de Comentarios</h2>
-      <form class="comentario-form" autocomplete="off">
-        <input type="text" class="input" placeholder="Tu nombre" />
-        <textarea class="input" placeholder="Escribe tu comentario aquí..." rows="4" ></textarea>
-        <button type="button" class="publicar-animado">Publicar</button>
-      </form>
-      <div class="comentarios-lista">
-        <div class="comentario-falso">
-          <strong>Explorador1:</strong> No puedo esperar a ver el futuro de este juego.
-        </div>
-        <div class="comentario-falso">
-          <strong>Hatchling123:</strong> La idea es super inovadora y las mecánicas son muy buenas.
-        </div>
-      </div>
-    </div>
-  </section>
-  <section><h1>Más sobre nosotros</h1>
-    <aside><img src="Fotos/Logo.png" alt="Logo" id="logo"></aside>
-  </section>
-</main>
+
+  <div class="container">
+    <button class="btn">¡Haz clic!</button>
+  </div>
+
+  <div class="comentarios-container">
+    <h2>Comentarios</h2>
+    <form class="comentario-form">
+      <input class="input" type="text" placeholder="Escribe tu comentario" />
+      <button class="btn" type="submit">Enviar</button>
+    </form>
+  </div>
+
   <footer>
     <div class="footer-content">
       <div class="social-icons">
-        <span>Siguenos en nuestras redes sociales:</span>
-        <span class="icon"><img src="Fotos/bskylogo.png" alt="bskylogo"></span>
-        <span class="icon"><img src="Fotos/faceboocklogo.png" alt="faceboocklogo"></span>
-        <span class="icon"><img src="Fotos/xlogo.png" alt="xlogo"></span>
-        <span class="icon"><img src="Fotos/linkedin.png" alt="linkedin"></span>
-        <span class="icon"><img src="Fotos/instagramlogo.png" alt="instagramlogo"></span>
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
       </div>
       <div class="official-link">
-        <span>Outer Wilds página oficial</span>
+        <a href="#">Sitio Oficial</a>
       </div>
       <div class="legal-links">
-        <span>Politica de privacidad</span>
-        <span>Terminos de Uso</span>
+        <a href="#">Términos</a>
+        <a href="#">Privacidad</a>
       </div>
     </div>
   </footer>
-  
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const audioControl = document.getElementById('audioControl');
-      const backgroundMusic = document.getElementById('backgroundMusic');
-      
-      audioControl.addEventListener('change', function() {
-        if (this.checked) {
-          backgroundMusic.play();
-        } else {
-          backgroundMusic.pause();
-        }
-      });
-    });
-  </script>
 </body>
 </html>
