@@ -7,9 +7,9 @@
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-    <!-- NUEVA BARRA DE NAVEGACIÓN -->
+  <!-- NUEVA BARRA DE NAVEGACIÓN -->
   <nav class="navbar">
-    <a href="#donar">Donaciones</a>
+    <a href="#contribuciones">Donaciones</a>
     <a href="#faq">Preguntas Frecuentes</a>
     <a href="#comentarios">Comentarios</a>
     <a href="#objetivos">Objetivos</a>
@@ -19,7 +19,7 @@
       <label for="usuario">Usuario</label>
       <input class="input" type="text" name="usuario" id="usuario" placeholder="Usuario" />
       <label for="contraseña">Contraseña</label>
-      <input class= "input" type="password" name="contraseña" id="contraseña" placeholder="Contraseña" />
+      <input class="input" type="password" name="contraseña" id="contraseña" placeholder="Contraseña" />
       <button type="submit"> Iniciar Sesión</button>
     </form>  
 
@@ -45,7 +45,7 @@
       El tiempo no pasa como debería...</h1>
     <section><h2 id="lema">La curiosidad es tu única herramienta y el final es solo el comienzo.</h2></section>
     <section>
-      <h1 id="nominado">Descripcion del juego...</h1>
+      <h1 id="nominado">Descripción del juego...</h1>
     </section>
     <section> 
       <div><h1>Puntos fuertes</h1>
@@ -59,7 +59,7 @@
 
     <section>
       <div>
-      <h1>Mecanicas de juego</h1>
+      <h1>Mecánicas de juego</h1>
       <ul>
         <li>texto</li>
         <li>texto</li>
@@ -89,9 +89,7 @@
   </section>
 
   <section><p>(Información del juego en relación al ambiente del video)</p></section>
-  <section id="donar">
-    <button class="btn">¿ QUIERES CONTRIBUIR DONANDONOS ?</button>
-  </section>
+  <section><button class="btn">¿QUIERES CONTRIBUIR DONÁNDONOS?</button></section>
   <section id="contribuciones">
     <h2>Niveles de Contribución</h2>
     <div class="contribucion-tier">
@@ -152,25 +150,23 @@
   </div>
 </section>
 
-  <section id="comentarios">
-    <img src="Fotos/Textosdecorativos.svg" alt="Textosdecorativos" id="decoracion2">
-    <div id="disqus_thread">
-      <script>
-          (function() {
-          var d = document, s = d.createElement('script');
-          s.src = 'https://https-felipeowenzz-github-io-proyecto-web-grupo-b.disqus.com/embed.js';
-          s.setAttribute('data-timestamp', +new Date());
-          (d.head || d.body).appendChild(s);
-          })();
-      </script>
-      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
+  <section><img src="Fotos/Textosdecorativos.svg" alt="Textosdecorativos" id="decoracion2"></section>
+  <section id="disqus_thread">
+    <script>
+        (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://https-felipeowenzz-github-io-proyecto-web-grupo-b.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   </section>
 
   <footer>
     <div class="footer-content">
       <div class="social-icons">
-        <span>Siguenos en nuestras redes sociales:</span>
+        <span>Síguenos en nuestras redes sociales:</span>
         <span class="icon"><img src="Fotos/bskylogo.png" alt="bskylogo"></span>
         <span class="icon"><img src="Fotos/faceboocklogo.png" alt="faceboocklogo"></span>
         <span class="icon"><img src="Fotos/xlogo.png" alt="xlogo"></span>
@@ -181,12 +177,12 @@
         <span>Outer Wilds página oficial</span>
       </div>
       <div class="legal-links">
-        <span>Politica de privacidad</span>
-        <span>Terminos de Uso</span>
+        <span>Política de privacidad</span>
+        <span>Términos de Uso</span>
       </div>
     </div>
   </footer>
-  
+
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const audioControl = document.getElementById('audioControl');
@@ -199,20 +195,21 @@
           backgroundMusic.pause();
         }
       });
-    });
 
-    document.querySelectorAll('.navbar a').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
-
-        if (targetElement) {
-          window.scrollTo({
-            top: targetElement.offsetTop - document.querySelector('.navbar').offsetHeight,
-            behavior: 'smooth'
-          });
-        }
+      // Scroll suave para la navegación
+      const navbarLinks = document.querySelectorAll(".navbar a");
+      navbarLinks.forEach(link => {
+        link.addEventListener("click", e => {
+          e.preventDefault();
+          const targetId = e.target.getAttribute("href").substring(1);
+          const targetSection = document.getElementById(targetId);
+          if (targetSection) {
+            targetSection.scrollIntoView({
+              behavior: "smooth",
+              block: "start"
+            });
+          }
+        });
       });
     });
   </script>
