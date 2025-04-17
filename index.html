@@ -199,18 +199,8 @@
         if (targetSection) {
           targetSection.scrollIntoView({
             behavior: 'smooth',
-            block: 'start'
+            block: targetId === 'decoracion2' ? 'start' : 'center',
           });
-
-          if (targetId === 'decoracion2') {
-            setTimeout(() => {
-              const disqusSection = document.getElementById('disqus_thread');
-              disqusSection.scrollIntoView({
-                behavior: 'smooth',
-                block: 'center'
-              });
-            }, 500);
-          }
         }
       });
     });
