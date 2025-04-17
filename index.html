@@ -1,21 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-<meta charset="UTF-8" />
-<title>Outer Wilds</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Outer Wilds</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <form>
-      <label for="usuario">Usuario</label>
-      <input class="input" type="text" name="usuario" id="usuario" placeholder="Usuario" />
-      <label for="contraseña">Contraseña</label>
-      <input class= "input" type="password" name="contraseña" id="contraseña" placeholder="Contraseña" />
-      <button type="submit"> Iniciar Sesión</button>
-    </form>  
-
+    <img src="Fotos/Empresalogo.png" alt="Empresalogo" id="Empresalogo">
+    
     <div class="container">
       <label>
         <input class="play-btn" type="checkbox" id="audioControl" title="Toggle background music" aria-label="Toggle background music">
@@ -27,92 +21,121 @@
         Tu navegador no soporta el elemento de audio.
       </audio>
     </div>
-
-    <img src="Fotos/Empresalogo.png" alt="Empresalogo" id="Empresalogo">
-
-
+    
+    <form>
+      <label for="usuario">Usuario</label>
+      <input class="input" type="text" name="usuario" id="usuario" placeholder="Usuario">
+      <label for="contraseña">Contraseña</label>
+      <input class="input" type="password" name="contraseña" id="contraseña" placeholder="Contraseña">
+      <button type="submit">Iniciar Sesión</button>
+    </form>
+    
+    <img src="Fotos/Titulo.png" alt="Titulofoto" id="title-image">
   </header>
+  
   <main>
-<img src="Fotos/Titulo.png" alt="Titulofoto" id="title-image">
-  <h1 id="welcome">Bienvenido al Sistema Solar de OuterWilds <br>
-    donde podrás explorar libremente un universo completamente nuevo como un Hatchling. 
-    <br>Pero, ¿no es extraño?
-    El tiempo no pasa como debería...</h1>
+    <h1 id="welcome">Bienvenido al Sistema Solar de OuterWilds<br>
+      donde podrás explorar libremente un universo completamente nuevo como un Hatchling. 
+      <br>Pero, ¿no es extraño?
+      El tiempo no pasa como debería...</h1>
+    
     <section> 
-      <div><h1>Puntos fuertes</h1>
-      <ul>
-        <li>texto</li>
-        <li>texto</li>
-        <li>texto</li> 
+      <div>
+        <h1>Puntos fuertes</h1>
+        <ul>
+          <li>Exploración no lineal</li>
+          <li>Mecánicas de física realista</li>
+          <li>Narrativa ambiental</li>
         </ul>
       </div>
-
-    <aside>
-      <img src="Fotos/Foto1.webp" alt="Foto1" id="foto1"/>
-      <div><img src="Gifs/gif1.gif" alt="gif1" class="gif"/></div>
-      
-    </aside >
-  </section>
-  <section>
-    <div>
-    <h1>Mecanicas de juego</h1>
-    <ul>
-      <li>texto</li>
-      <li>texto</li>
-      <li>texto</li>
-    </ul>
-  </div>
-  
-    <aside>
-      <img src="Fotos/Foto2.webp" alt="Foto2" id="foto2"/>
-      <div><img src="Gifs/gif2.gif" alt="gif2" class="gif"/></div>
-    </aside>
-  </section>
-  <section><img src="Fotos/Decoración1.png" alt="Decoración1" id="decoracion1"></section>
-  <section>
-    <h1 id="nominado">Ganador del premio a Mejor Juego en los BAFTA Games Awards de 2020 
-      y nombrado Juego del Año 2019 por Giant Bomb, Polygon, Eurogamer y The Guardian.</h1>
-  </section>
-  <section>
-    <div class="video-container">
-      <iframe 
-        width="100%" 
-        height="500"
-        src="https://www.youtube.com/embed/ti-8C6od6ME" 
-        title="Outer Wilds Trailer"
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
-      </iframe>
-      </video>
-    </div>
-  </section>
-  <section><p>(Información del juego en relación al ambiente del video)</p></section>
-  <section><button class="btn">¿ QUIERES CONTRIBUIR DONANDONOS ?</button></section>
+      <aside>
+        <img src="Fotos/Foto1.webp" alt="Foto1" id="foto1">
+        <div><img src="Gifs/gif1.gif" alt="gif1" class="gif"></div>
+      </aside>
+    </section>
     
-  <section><img src="Fotos/Textosdecorativos.svg" alt="Textosdecorativos" id="decoracion2"></section>
-  <section id="comentarios-section">
-    <div class="comentarios-container">
-      <h2>Foro de Comentarios</h2>
-      <form class="comentario-form" autocomplete="off">
-        <input type="text" class="input" placeholder="Tu nombre" />
-        <textarea class="input" placeholder="Escribe tu comentario aquí..." rows="4" ></textarea>
-        <button type="button" class="publicar-animado">Publicar</button>
-      </form>
-      <div class="comentarios-lista">
-        <div class="comentario-falso">
-          <strong>Explorador1:</strong> No puedo esperar a ver el futuro de este juego.
-        </div>
-        <div class="comentario-falso">
-          <strong>Hatchling123:</strong> La idea es super inovadora y las mecánicas son muy buenas.
+    <form class="search-form">
+      <input type="text" placeholder="Buscar...">
+      <button type="submit">Buscar</button>
+    </form>
+    
+    <section>
+      <div>
+        <h1>Mecanicas de juego</h1>
+        <ul>
+          <li>Vuelo espacial con física real</li>
+          <li>Puzles basados en conocimiento</li>
+          <li>Ciclo temporal de 22 minutos</li>
+        </ul>
+      </div>
+      <aside>
+        <img src="Fotos/Foto2.webp" alt="Foto2" id="foto2">
+        <div><img src="Gifs/gif2.gif" alt="gif2" class="gif"></div>
+      </aside>
+    </section>
+    
+    <section>
+      <img src="Fotos/Decoración1.png" alt="Decoración1" id="decoracion1">
+    </section>
+    
+    <section>
+      <h1 id="nominado">Ganador del premio a Mejor Juego en los BAFTA Games Awards de 2020 
+        y nombrado Juego del Año 2019 por Giant Bomb, Polygon, Eurogamer y The Guardian.</h1>
+    </section>
+    
+    <section>
+      <div class="video-container">
+        <iframe 
+          width="100%" 
+          height="500"
+          src="https://www.youtube.com/embed/ti-8C6od6ME" 
+          title="Outer Wilds Trailer"
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+    
+    <section>
+      <p>Explora un sistema solar en constante evolución en este juego de aventuras galardonado.</p>
+    </section>
+    
+    <section>
+      <button class="btn">¿QUIERES CONTRIBUIR DONANDONOS?</button>
+    </section>
+    
+    <section>
+      <img src="Fotos/Textosdecorativos.svg" alt="Textosdecorativos" id="decoracion2">
+    </section>
+    
+    <section id="comentarios-section">
+      <div class="comentarios-container">
+        <h2>Foro de Comentarios</h2>
+        <form class="comentario-form" autocomplete="off">
+          <input type="text" class="input" placeholder="Tu nombre">
+          <textarea class="input" placeholder="Escribe tu comentario aquí..." rows="4"></textarea>
+          <button type="button" class="publicar-animado">Publicar</button>
+        </form>
+        <div class="comentarios-lista">
+          <div class="comentario-falso">
+            <strong>Explorador1:</strong> No puedo esperar a ver el futuro de este juego.
+          </div>
+          <div class="comentario-falso">
+            <strong>Hatchling123:</strong> La idea es super innovadora y las mecánicas son muy buenas.
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section><h1>Más sobre nosotros</h1>
-    <aside><img src="Fotos/Logo.png" alt="Logo" id="logo"></aside>
-  </section>
-</main>
+    </section>
+    
+    <section>
+      <h1>Más sobre nosotros</h1>
+      <aside>
+        <img src="Fotos/Logo.png" alt="Logo" id="logo">
+      </aside>
+    </section>
+  </main>
+  
   <footer>
     <div class="footer-content">
       <div class="social-icons">
@@ -125,6 +148,7 @@
       </div>
       <div class="official-link">
         <span>Outer Wilds página oficial</span>
+        <a href="https://www.outerwilds.com" target="_blank">Sitio Oficial</a>
       </div>
       <div class="legal-links">
         <span>Politica de privacidad</span>
