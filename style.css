@@ -87,9 +87,7 @@ body {
     width: 100%;
     max-width: 1000px;
 }
-/* Sección de Preguntas Frecuentes (FAQ) */
-
-/* Sección de Preguntas Frecuentes (FAQ) - Versión mejorada */
+//FAQ
 #faq {
   background-color: rgba(20, 20, 20, 0.95);
   padding: 40px 20px;
