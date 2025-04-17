@@ -99,14 +99,15 @@ main {
   margin-top: 15px;
 }
 
-/* Sección FAQ */
 #faq-section {
   background: rgba(20,20,20,0.8);
   padding: 40px;
   margin: 40px 0;
   border-radius: 10px;
   text-align: center;
+  position: relative; 
 }
+
 
 #faq-section h2 {
   font-size: 2rem;
