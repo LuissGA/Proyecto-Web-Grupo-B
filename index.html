@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<title>Outer Wilds</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outer Wilds</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
   <header>
     <form>
       <label for="usuario">Usuario</label>
-      <input class="input" type="text" name="usuario" id="usuario" placeholder="Usuario" />
+      <input class="input" type="text" name="usuario" id="usuario" placeholder="Usuario">
       <label for="contraseña">Contraseña</label>
-      <input class= "input" type="password" name="contraseña" id="contraseña" placeholder="Contraseña" />
-      <button type="submit"> Iniciar Sesión</button>
-    </form>  
+      <input class="input" type="password" name="contraseña" id="contraseña" placeholder="Contraseña">
+      <button type="submit">Iniciar Sesión</button>
+    </form>
 
     <div class="container">
       <label>
-        <input class="play-btn" type="checkbox" id="audioControl" title="Alternar música de fondo" aria-label="Alternar música de fondo">
+        <input class="play-btn" type="checkbox" id="audioControl" title="Alternar música de fondo">
         <div class="play-icon"></div>
         <div class="pause-icon"></div>
       </label>
@@ -32,36 +32,32 @@
   </header>
 
   <main>
-    <img src="Fotos/Titulo.png" alt="Imagen del título" id="title-image">
-    <h1 id="welcome">Bienvenido al Sistema Solar de Outer Wilds <br>
-      donde podrás explorar libremente un universo completamente nuevo como un Hatchling. 
-      <br>Pero, ¿no es extraño?
-      El tiempo no pasa como debería...</h1>
+    <img src="Fotos/Titulo.png" alt="Título del juego" id="title-image">
+    
+    <h1 id="welcome">Bienvenido al Sistema Solar de Outer Wilds<br>
+      donde podrás explorar libremente un universo completamente nuevo como un Hatchling.<br>
+      Pero, ¿no es extraño? El tiempo no pasa como debería...</h1>
 
-    <section>
+    <section id="lema-section">
       <h2 id="lema">La curiosidad es tu única herramienta y el final es solo el comienzo.</h2>
     </section>
 
-    <section>
-      <h1 id="nominado">Descripción del juego...</h1>
-    </section>
-
-    <section> 
+    <section class="content-section">
       <div>
         <h1>Puntos fuertes</h1>
         <ul>
           <li>Exploración no lineal</li>
           <li>Narrativa inmersiva</li>
-          <li>Viajes en el tiempo dinámicos</li> 
+          <li>Viajes en el tiempo dinámicos</li>
         </ul>
       </div>
       <aside>
-        <img src="Fotos/Foto1.webp" alt="Captura de pantalla del juego" id="foto1"/>
-        <div><img src="Gifs/gif1.gif" alt="Gif del juego" class="gif"/></div>
+        <img src="Fotos/Foto1.webp" alt="Captura del juego" id="foto1">
+        <img src="Gifs/gif1.gif" alt="GIF demostrativo" class="gif">
       </aside>
     </section>
 
-    <section>
+    <section class="content-section">
       <div>
         <h1>Mecánicas de juego</h1>
         <ul>
@@ -71,84 +67,85 @@
         </ul>
       </div>
       <aside>
-        <img src="Fotos/Foto2.webp" alt="Imagen del entorno del juego" id="foto2"/>
-        <div><img src="Gifs/gif2.gif" alt="Gif de mecánicas" class="gif"/></div>
+        <img src="Fotos/Foto2.webp" alt="Entorno del juego" id="foto2">
+        <img src="Gifs/gif2.gif" alt="GIF de mecánicas" class="gif">
       </aside>
     </section>
 
-    <section>
-      <div class="video-container">
-        <iframe 
-          width="100%" 
-          height="500"
-          src="https://www.youtube.com/embed/ti-8C6od6ME" 
-          title="Tráiler de Outer Wilds"
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen>
-        </iframe>
-      </div>
+    <section id="decorative-section">
+      <img src="Fotos/Decoración1.png" alt="Diseño decorativo" id="decoracion1">
     </section>
 
-    <section><p>El tráiler muestra la atmósfera misteriosa y el tono filosófico del juego. Cada planeta tiene secretos únicos y una historia profunda.</p></section>
+    <section id="nominado-section">
+      <h1 id="nominado">Ganador del premio a Mejor Juego en los BAFTA Games Awards de 2020</h1>
+    </section>
 
-    <section>
+    <section class="video-section">
+      <div class="video-container">
+        <iframe width="100%" height="500" src="https://www.youtube.com/embed/ti-8C6od6ME" 
+                title="Tráiler de Outer Wilds" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
+      </div>
+      <p>El tráiler muestra la atmósfera misteriosa y el tono filosófico del juego.</p>
+    </section>
+
+    <section id="donation-section">
       <button class="btn">¿QUIERES CONTRIBUIR DONÁNDONOS?</button>
     </section>
 
-    <section>
-      <img src="Fotos/Textosdecorativos.svg" alt="Decoración visual" id="decoracion2">
+    <section id="decorative-section-2">
+      <img src="Fotos/Textosdecorativos.svg" alt="Diseño decorativo" id="decoracion2">
     </section>
 
-    <section id="faq" class="container">
+    <section id="faq-section">
       <h2>Preguntas Frecuentes</h2>
-      <details>
-        <summary>¿Cuánto dura una partida de Outer Wilds?</summary>
-        <p>Una partida puede durar entre 15 y 25 horas, dependiendo de cuánto explores y resuelvas los misterios.</p>
-      </details>
-      <details>
-        <summary>¿Necesito experiencia previa con juegos de exploración?</summary>
-        <p>No, el juego está diseñado para que cualquiera pueda disfrutarlo sin necesidad de experiencia previa.</p>
-      </details>
-      <details>
-        <summary>¿El juego tiene doblaje en español?</summary>
-        <p>El juego no tiene doblaje en español, pero sí cuenta con subtítulos traducidos completamente.</p>
-      </details>
+      <div class="faq-container">
+        <details>
+          <summary>¿Cuánto dura una partida de Outer Wilds?</summary>
+          <p>Una partida puede durar entre 15 y 25 horas, dependiendo de cuánto explores.</p>
+        </details>
+        <details>
+          <summary>¿Necesito experiencia previa?</summary>
+          <p>No, el juego está diseñado para que cualquiera pueda disfrutarlo.</p>
+        </details>
+        <details>
+          <summary>¿Tiene doblaje en español?</summary>
+          <p>No tiene doblaje pero sí subtítulos completos en español.</p>
+        </details>
+      </div>
     </section>
 
-    <section id="disqus_thread"></section>
+    <section id="comments-section">
+      <div id="disqus_thread"></div>
+    </section>
 
-    <section>
+    <section id="about-section">
       <h1>Más sobre nosotros</h1>
-      <aside><img src="Fotos/Logo.png" alt="Logo del proyecto" id="logo"></aside>
+      <img src="Fotos/Logo.png" alt="Logo del proyecto" id="logo">
     </section>
 
-    <section>
-      <p>
-        ATENCIÓN: Esta página simula la campaña de microfinanciación de un videojuego ficticio y no
-        representa un producto real. Práctica de Multimedia, 1º GDDV - Curso 24/25
-        (Móstoles/Quintana), URJC. La URJC no se hace responsable del contenido expuesto por el
-        autor.
-      </p>
+    <section id="disclaimer">
+      <p>ATENCIÓN: Esta página simula la campaña de microfinanciación de un videojuego ficticio y no representa un producto real. Práctica de Multimedia, 1º GDDV - Curso 24/25 (Móstoles/Quintana), URJC.</p>
     </section>
   </main>
 
   <footer>
     <div class="footer-content">
       <div class="social-icons">
-        <span>Síguenos en nuestras redes sociales:</span>
-        <span class="icon"><img src="Fotos/bskylogo.png" alt="Logo Bluesky"></span>
-        <span class="icon"><img src="Fotos/faceboocklogo.png" alt="Logo Facebook"></span>
-        <span class="icon"><img src="Fotos/xlogo.png" alt="Logo X/Twitter"></span>
-        <span class="icon"><img src="Fotos/linkedin.png" alt="Logo LinkedIn"></span>
-        <span class="icon"><img src="Fotos/instagramlogo.png" alt="Logo Instagram"></span>
+        <span>Síguenos:</span>
+        <img src="Fotos/bskylogo.png" alt="Bluesky">
+        <img src="Fotos/faceboocklogo.png" alt="Facebook">
+        <img src="Fotos/xlogo.png" alt="Twitter">
+        <img src="Fotos/linkedin.png" alt="LinkedIn">
+        <img src="Fotos/instagramlogo.png" alt="Instagram">
       </div>
       <div class="official-link">
-        <span>Página oficial de Outer Wilds</span>
+        <a href="#">Página oficial</a>
       </div>
       <div class="legal-links">
-        <span>Política de privacidad</span>
-        <span>Términos de uso</span>
+        <a href="#">Política de privacidad</a>
+        <a href="#">Términos de uso</a>
       </div>
     </div>
   </footer>
@@ -157,24 +154,11 @@
     document.addEventListener('DOMContentLoaded', function() {
       const audioControl = document.getElementById('audioControl');
       const backgroundMusic = document.getElementById('backgroundMusic');
-
+      
       audioControl.addEventListener('change', function() {
-        if (this.checked) {
-          backgroundMusic.play();
-        } else {
-          backgroundMusic.pause();
-        }
+        this.checked ? backgroundMusic.play() : backgroundMusic.pause();
       });
     });
   </script>
-  <script>
-    (function() {
-      var d = document, s = d.createElement('script');
-      s.src = 'https://https-felipeowenzz-github-io-proyecto-web-grupo-b.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
-  </script>
-  <script id="dsq-count-scr" src="//https-felipeowenzz-github-io-proyecto-web-grupo-b.disqus.com/count.js" async></script>
 </body>
 </html>
