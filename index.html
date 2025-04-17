@@ -30,7 +30,6 @@
 
     <img src="Fotos/Empresalogo.png" alt="Empresalogo" id="Empresalogo">
   </header>
-
   <main>
     <img src="Fotos/Titulo.png" alt="Titulofoto" id="title-image">
     <h1 id="welcome">Bienvenido al Sistema Solar de OuterWilds <br>
@@ -49,22 +48,18 @@
           <li>texto</li> 
         </ul>
       </div>
-    <aside>
-      <img src="Fotos/Foto1.webp" alt="Foto1" id="foto1"/>
-      <div><img src="Gifs/gif1.gif" alt="gif1" class="gif"/></div>
-    </aside>
-  </section>
+    </section>
 
-  <section>
-    <div>
-    <h1>Mecanicas de juego</h1>
-    <ul>
-      <li>texto</li>
-      <li>texto</li>
-      <li>texto</li>
-    </ul>
-  </div>
-  
+    <section>
+      <div>
+      <h1>Mecanicas de juego</h1>
+      <ul>
+        <li>texto</li>
+        <li>texto</li>
+        <li>texto</li>
+      </ul>
+    </div>
+
     <aside>
       <img src="Fotos/Foto2.webp" alt="Foto2" id="foto2"/>
       <div><img src="Gifs/gif2.gif" alt="gif2" class="gif"/></div>
@@ -82,11 +77,12 @@
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
         allowfullscreen>
       </iframe>
+      </video>
     </div>
   </section>
+
   <section><p>(Información del juego en relación al ambiente del video)</p></section>
   <section><button class="btn">¿ QUIERES CONTRIBUIR DONANDONOS ?</button></section>
-
   <section id="contribuciones">
     <h2>Niveles de Contribución</h2>
     <div class="contribucion-tier">
@@ -126,39 +122,27 @@
     </div>
   </section>
 
-  <section>
-    <h1>Preguntas Frecuentes (FAQ)</h1>
-    <div class="faq">
-      <h2>¿Cuándo se lanzará el juego?</h2>
-      <p>El juego tiene prevista su fecha de lanzamiento para finales de 2026, dependiendo de los fondos recaudados.</p>
+  <!-- Nueva sección de Preguntas Frecuentes (FAQ) -->
+  <section id="faq">
+    <h2>Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3 class="faq-question">¿Cómo puedo unirme al juego?</h3>
+      <p class="faq-answer">Puedes unirte al juego en cuanto se haga el lanzamiento de la beta cerrada. Haz tu contribución en la sección de "Contribuciones" para obtener acceso anticipado.</p>
     </div>
-    <div class="faq">
-      <h2>¿Cómo puedo contribuir?</h2>
-      <p>Puedes contribuir a través de los niveles de financiación disponibles en la sección "Niveles de Contribución".</p>
+    <div class="faq-item">
+      <h3 class="faq-question">¿Cuál es la fecha de lanzamiento del juego?</h3>
+      <p class="faq-answer">La fecha de lanzamiento prevista es para diciembre de 2025, aunque podría retrasarse dependiendo de la financiación.</p>
     </div>
-    <div class="faq">
-      <h2>¿Habrá soporte en otros idiomas?</h2>
-      <p>El juego se lanzará en inglés y español, con planes de añadir otros idiomas si alcanzamos objetivos de financiación más altos.</p>
-    </div>
-    <div class="faq">
-      <h2>¿Puedo jugar en línea con otros jugadores?</h2>
-      <p>Actualmente estamos trabajando en un modo multijugador cooperativo, pero se lanzará solo si alcanzamos el objetivo de 25,000€ en la campaña de financiación.</p>
+    <div class="faq-item">
+      <h3 class="faq-question">¿Puedo contribuir con más de 50€?</h3>
+      <p class="faq-answer">¡Sí! Puedes contribuir con cualquier cantidad y recibirás recompensas adicionales según el nivel de contribución.</p>
     </div>
   </section>
 
   <section><img src="Fotos/Textosdecorativos.svg" alt="Textosdecorativos" id="decoracion2"></section>
   <section id="disqus_thread">
     <script>
-        /**
-        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-        /*
-        var disqus_config = function () {
-        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-        };
-        */
-        (function() { // DON'T EDIT BELOW THIS LINE
+        (function() {
         var d = document, s = d.createElement('script');
         s.src = 'https://https-felipeowenzz-github-io-proyecto-web-grupo-b.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
@@ -167,17 +151,6 @@
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   </section>
-
-  <section><h1>Más sobre nosotros</h1>
-    <aside><img src="Fotos/Logo.png" alt="Logo" id="logo"></aside>
-  </section>
-  <section><p>ATENCIÓN: Esta página simula la campaña de microfinanciación de un videojuego ficticio y no
-    representa un producto real. Práctica de Multimedia, 1º GDDV - Curso 24/25
-    (Móstoles/Quintana), URJC. La URJC no se hace responsable del contenido expuesto por el
-    autor.
-    </p>
-  </section>
-</main>
 
   <footer>
     <div class="footer-content">
@@ -213,6 +186,4 @@
       });
     });
   </script>
-  <script id="dsq-count-scr" url="//https-felipeowenzz-github-io-proyecto-web-grupo-b.disqus.com/count.js" async></script>
-</body>
-</html>
+  <script id="dsq-count-scr" url="//https-felipeowenzz-github-io-proyecto
