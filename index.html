@@ -9,9 +9,9 @@
 <body>
   <!-- NUEVA BARRA DE NAVEGACIÓN -->
 <nav class="navbar">
-  <a href="#donar-boton">Donaciones</a> <!-- Cambia el href al nuevo id -->
+  <a href="#donar-boton">Donaciones</a>
   <a href="#faq">Preguntas Frecuentes</a>
-  <a href="#comentarios">Comentarios</a>
+  <a href="#decoracion2">Comentarios</a> <!-- Cambiado para apuntar a decoracion2 -->
   <a href="#objetivos">Objetivos</a>
 </nav>
   <header>
@@ -200,7 +200,7 @@
         }
       });
 
-    <script>
+  <script>
   document.addEventListener('DOMContentLoaded', function () {
     const navbarLinks = document.querySelectorAll('.navbar a');
 
@@ -210,10 +210,22 @@
         const targetId = e.target.getAttribute('href').substring(1);
         const targetSection = document.getElementById(targetId);
         if (targetSection) {
+          
           targetSection.scrollIntoView({
             behavior: 'smooth',
-            block: 'center' // Esto asegura que el objetivo quede centrado
+            block: 'start' 
           });
+
+        
+          if (targetId === 'decoracion2') {
+            setTimeout(() => {
+              const disqusSection = document.getElementById('disqus_thread');
+              disqusSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center' 
+              });
+            }, 500); 
+          }
         }
       });
     });
