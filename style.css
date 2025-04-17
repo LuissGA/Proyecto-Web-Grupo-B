@@ -1,29 +1,50 @@
-/* ======== NAVBAR NUEVA ======== */
+/* ======== NAVBAR MEJORADA ======== */
 .navbar {
-  position: fixed;
+  position: fixed; /* Fijo en la parte superior */
   top: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro translúcido */
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 40px;
-  padding: 15px 0;
+  padding: 10px 20px;
   z-index: 9999;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .navbar a {
   color: #ffb347;
   text-decoration: none;
   font-size: 1.2em;
-  transition: color 0.3s ease;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .navbar a:hover {
   color: #ff6347;
   text-shadow: 0 0 10px #ffb347;
+  transform: scale(1.1); /* Animación al pasar el mouse */
 }
 
+/* Efecto de navegación al hacer scroll */
+body.scrolled .navbar {
+  background-color: rgba(0, 0, 0, 0.95); /* Un poco más opaco al hacer scroll */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* ======== AJUSTES RESPONSIVOS ======== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    gap: 20px;
+  }
+
+  .navbar a {
+    font-size: 1em; /* Reduce el tamaño del texto */
+  }
+}
 
 
 /* ======== AJUSTES EXTRA PARA HEADER Y BODY ======== */
