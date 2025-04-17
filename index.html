@@ -9,7 +9,7 @@
 <body>
     <!-- NUEVA BARRA DE NAVEGACIÓN -->
   <nav class="navbar">
-    <a href="#donar">Donaciones</a>
+    <a href="#contribuciones">Donaciones</a>
     <a href="#faq">Preguntas Frecuentes</a>
     <a href="#comentarios">Comentarios</a>
     <a href="#objetivos">Objetivos</a>
@@ -89,9 +89,7 @@
   </section>
 
   <section><p>(Información del juego en relación al ambiente del video)</p></section>
-  <section id="donar">
-    <button class="btn">¿ QUIERES CONTRIBUIR DONANDONOS ?</button>
-  </section>
+  <section><button class="btn">¿ QUIERES CONTRIBUIR DONANDONOS ?</button></section>
   <section id="contribuciones">
     <h2>Niveles de Contribución</h2>
     <div class="contribucion-tier">
@@ -152,19 +150,17 @@
   </div>
 </section>
 
-  <section id="comentarios">
-    <img src="Fotos/Textosdecorativos.svg" alt="Textosdecorativos" id="decoracion2">
-    <div id="disqus_thread">
-      <script>
-          (function() {
-          var d = document, s = d.createElement('script');
-          s.src = 'https://https-felipeowenzz-github-io-proyecto-web-grupo-b.disqus.com/embed.js';
-          s.setAttribute('data-timestamp', +new Date());
-          (d.head || d.body).appendChild(s);
-          })();
-      </script>
-      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
+  <section><img src="Fotos/Textosdecorativos.svg" alt="Textosdecorativos" id="decoracion2"></section>
+  <section id="disqus_thread">
+    <script>
+        (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://https-felipeowenzz-github-io-proyecto-web-grupo-b.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   </section>
 
   <footer>
@@ -200,21 +196,7 @@
         }
       });
     });
-
-    document.querySelectorAll('.navbar a').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
-
-        if (targetElement) {
-          window.scrollTo({
-            top: targetElement.offsetTop - document.querySelector('.navbar').offsetHeight,
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-  </script>
+</script>
+  <script id="dsq-count-scr" url="//https-felipeowenzz-github-io-proyecto-web-grupo-b.disqus.com/count.js" async></script>
 </body>
 </html>
