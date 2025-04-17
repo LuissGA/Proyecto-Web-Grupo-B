@@ -92,7 +92,6 @@ body {
 #faq {
   background-color: rgba(20, 20, 20, 0.95);
   padding: 40px 20px;
-  margin-top: 30px;
   border-radius: 12px;
   color: whitesmoke;
   text-align: center;
@@ -107,37 +106,59 @@ body {
 .faq-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 20px;
+  gap: 15px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .faq-card {
   background: linear-gradient(145deg, #2c2c2c, #1a1a1a);
   border: 1px solid #444;
   border-left: 5px solid #ff6347;
-  padding: 20px;
   border-radius: 12px;
-  width: 90%;
-  max-width: 700px;
+  padding: 0 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
 
-.faq-card:hover {
-  transform: translateY(-4px);
+.faq-card[open] {
   box-shadow: 0 6px 14px rgba(255, 99, 71, 0.4);
 }
 
-.faq-card h3 {
+.faq-card summary {
+  cursor: pointer;
+  padding: 20px 0;
   color: #ff6347;
-  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 1.1em;
+  list-style: none;
+  position: relative;
+}
+
+.faq-card summary::marker {
+  display: none;
+}
+
+.faq-card summary::after {
+  content: "▼";
+  position: absolute;
+  right: 0;
+  transition: transform 0.3s ease;
+}
+
+.faq-card[open] summary::after {
+  transform: rotate(180deg);
 }
 
 .faq-card p {
-  font-size: 0.95em;
   color: #e0e0e0;
-  line-height: 1.6;
+  padding: 10px 0 20px;
+  margin: 0;
+  font-size: 0.95em;
+  line-height: 1.5;
 }
+
 
 
 .gif {
