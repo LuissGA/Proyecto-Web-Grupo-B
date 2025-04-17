@@ -188,19 +188,6 @@
   </footer>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const audioControl = document.getElementById('audioControl');
-      const backgroundMusic = document.getElementById('backgroundMusic');
-      
-      audioControl.addEventListener('change', function() {
-        if (this.checked) {
-          backgroundMusic.play();
-        } else {
-          backgroundMusic.pause();
-        }
-      });
-
-  <script>
   document.addEventListener('DOMContentLoaded', function () {
     const navbarLinks = document.querySelectorAll('.navbar a');
 
@@ -210,24 +197,24 @@
         const targetId = e.target.getAttribute('href').substring(1);
         const targetSection = document.getElementById(targetId);
         if (targetSection) {
-          
           targetSection.scrollIntoView({
             behavior: 'smooth',
-            block: 'start' 
+            block: 'start'
           });
 
-        
           if (targetId === 'decoracion2') {
             setTimeout(() => {
               const disqusSection = document.getElementById('disqus_thread');
               disqusSection.scrollIntoView({
                 behavior: 'smooth',
-                block: 'center' 
+                block: 'center'
               });
-            }, 500); 
+            }, 500);
           }
         }
       });
     });
   });
-</script>
+  </script>
+</body>
+</html>
