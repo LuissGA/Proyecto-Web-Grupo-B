@@ -1,3 +1,4 @@
+
 header {
     height: 450px;
     background-color: black;
@@ -10,6 +11,7 @@ body {
     background-image: url("Fotos/Fondo.png");
     background-size: height=500%;
     font-family: Arial, sans-serif;
+
 }
 .input {
     border: none;
@@ -20,14 +22,15 @@ body {
     box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
     transition: 300ms ease-in-out;
     color: black;
-}
-
-.input:focus {
+  }
+  
+  .input:focus {
     background-color: white;
     transform: scale(1.05);
-}
 
-#Empresalogo {
+  }
+
+  #Empresalogo {
     position: relative;
     top: -68px;
     left: 100px; }
@@ -56,16 +59,18 @@ body {
   text-align: center;
 }
 
+
+
 #foto1 {
     float: right;
     height: 200px;
+    
 }
-
 #foto2 {
     float: right;
     height: 213px;
+    
 }
-
 #decoracion1, #decoracion2 {
     max-width: 100%;
     height: auto;
@@ -82,6 +87,45 @@ body {
     width: 100%;
     max-width: 1000px;
 }
+/* Sección de Preguntas Frecuentes (FAQ) */
+#faq {
+  background-color: rgba(30, 30, 30, 0.9);
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  color: whitesmoke;
+  text-align: center;
+  position: relative;
+  
+}
+
+#faq h2 {
+  color: #ffb347;
+  margin-bottom: 20px;
+}
+
+.faq-item {
+  background-color: rgba(50, 50, 50, 0.8);
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 700px;
+  margin: 0 auto 15px auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.faq-item h3 {
+  color: #ff6347;
+  margin-bottom: 10px;
+}
+
+.faq-item p {
+  color: #e0e0e0;
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+
 
 .gif {
     height: 150px;
@@ -89,7 +133,7 @@ body {
 .gif {
     height: 150px;
 }
-DL {
+DL  {
     text-align: center;
 }
 
@@ -113,7 +157,7 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
     cursor: default;
 }
 
-button {
+button  {
     background-color: #0c0c0c;
     border: none;
     color: whitesmoke; 
@@ -123,6 +167,7 @@ form {
  text-align: right; 
  padding: 20px;
 }
+
 
 section {
     display: flex;
@@ -148,14 +193,14 @@ aside {
     margin: 20px 0;
     display: flex;
     justify-content: center;
-}
+  }
   
-.video-container video {
+  .video-container video {
     max-width: 800px;
     width: 100%;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
+  }
 
 /* sección de contribuciones */
 
@@ -231,9 +276,8 @@ aside {
     color: #aaa;
 }
 
-/* sección de objetivos*/
-
-#objetivos {
+  /* sección de objetivos*/
+  #objetivos {
     display: flex;
     flex-direction: column; 
     align-items: center; 
@@ -279,9 +323,9 @@ aside {
     border-radius: 50%;
     top: 10px;
     z-index: 1000;
-}
-
-.play-btn {
+  }
+  
+  .play-btn {
     position: absolute;
     appearance: none;
     width: 100%;
@@ -290,9 +334,9 @@ aside {
     background: conic-gradient(#ff6347, #ff6347);
     cursor: pointer;
     outline: none;
-}
-
-.play-btn::before {
+  }
+  
+  .play-btn::before {
     content: "";
     position: absolute;
     width: 93%;
@@ -302,30 +346,30 @@ aside {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-}
-
-.play-btn:checked {
+  }
+  
+  .play-btn:checked {
     animation: borderAnimate 700ms ease-in-out 1;
     animation-fill-mode: forwards;
-}
-
-@keyframes borderAnimate {
+  }
+  
+  @keyframes borderAnimate {
     0% {
-        transform: rotate(0);
-        background: conic-gradient(#ff6347, transparent 20%);
+      transform: rotate(0);
+      background: conic-gradient(#ff6347, transparent 20%);
     }
-
+  
     80% {
-        background: conic-gradient(#ff6347, transparent 90%);
+      background: conic-gradient(#ff6347, transparent 90%);
     }
-
+  
     100% {
-        transform: rotate(360deg);
-        background: conic-gradient(#ff6347, #ff6347);
+      transform: rotate(360deg);
+      background: conic-gradient(#ff6347, #ff6347);
     }
-}
-
-.play-icon {
+  }
+  
+  .play-icon {
     position: absolute;
     width: 40px;
     height: 40px;
@@ -336,13 +380,13 @@ aside {
     clip-path: polygon(50% 15%, 0% 100%, 100% 100%);
     transition: all 400ms ease-in-out;
     cursor: pointer;
-}
-
-.play-btn:checked + .play-icon {
+  }
+  
+  .play-btn:checked + .play-icon {
     clip-path: polygon(0 100%, 0% 100%, 100% 100%);
-}
-
-.pause-icon {
+  }
+  
+  .pause-icon {
     position: absolute;
     width: 40px;
     height: 40px;
@@ -350,49 +394,49 @@ aside {
     top: 53%;
     transform: translate(-50%, -50%);
     cursor: pointer;
-}
-
-.pause-icon::before {
+  }
+  
+  .pause-icon::before {
     content: "";
     position: absolute;
     width: 0%;
     height: 100%;
     background-color: #ff6347;
     left: 0;
-}
-
-.pause-icon::after {
+  }
+  
+  .pause-icon::after {
     content: "";
     position: absolute;
     width: 0;
     height: 100%;
     background-color: #ff6347;
     right: 0;
-}
-
-.play-btn:checked ~ .pause-icon::before {
+  }
+  
+  .play-btn:checked ~ .pause-icon::before {
     animation: reveal 300ms ease-in-out 350ms 1;
     animation-fill-mode: forwards;
-}
-
-.play-btn:checked ~ .pause-icon::after {
+  }
+  
+  .play-btn:checked ~ .pause-icon::after {
     animation: reveal 300ms ease-in-out 600ms 1;
     animation-fill-mode: forwards;
-}
-
-@keyframes reveal {
+  }
+  
+  @keyframes reveal {
     0% {
-        width: 0;
+      width: 0;
     }
-
+  
     100% {
-        width: 35%;
+      width: 35%;
     }
-}
+  }
 
-/* boton de donar */
-
-.btn {
+  /* boton de donar */
+  .btn {
+    
     background-color: #000000;
     padding: 14px 40px;
     color: #fff;
@@ -406,24 +450,24 @@ aside {
     display: block;
     margin: 0 auto;
     font-size: 1.2rem;
-}
-
-.btn span:last-child {
+   }
+   
+   .btn span:last-child {
     display: none;
-}
-
-.btn:hover {
+   }
+   
+   .btn:hover {
     transition: .4s;
     border: 2px dashed #000000;
     background-color: #fff;
     color: #000000;
-}
-
-.btn:active {
+   }
+   
+   .btn:active {
     background-color: #ff5e00;
-}
+   }
 
-/* Footer */
+   /* Footer */
 footer {
   background-color: #000000; 
   color: #ccc;
@@ -451,17 +495,17 @@ footer {
 }
 
 .social-icons {
-  display: flex; /* Ensure icons are in a row */
-  align-items: center; /* Align items vertically */
-  gap: 10px; /* Add space between icons */
-  pointer-events: auto; /* Enable pointer events for children */
+  display: flex; 
+  align-items: center; 
+  gap: 10px; 
+  pointer-events: auto; 
 }
 
 .social-icons .icon {
-  display: inline-block; /* Needed for transform */
+  display: inline-block;
   transition: transform 0.3s ease, filter 0.3s ease;
-  cursor: pointer; /* Indicate interactivity */
-  pointer-events: auto; /* Ensure individual icons are clickable */
+  cursor: pointer; 
+  pointer-events: auto;
 }
 
 .social-icons .icon:hover {
@@ -483,6 +527,7 @@ footer {
   color: #ffb347; /* Highlight color on hover */
 }
 
+/* Original .social-icons rule might need adjustment if it conflicts */
 .social-icons {
   display: flex;
   align-items: center;
