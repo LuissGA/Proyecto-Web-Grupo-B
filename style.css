@@ -43,7 +43,6 @@ body {
 /* Imagen del título */
 #title-image {
   display: block; /* Mantiene la imagen en su propia línea */
-  margin: 0 auto; /* Centra la imagen horizontalmente */
   height: 200px; /* Conserva el tamaño original */
   padding-bottom: 20px; /* Añade espacio debajo de la imagen */
 }
