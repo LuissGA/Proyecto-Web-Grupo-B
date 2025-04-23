@@ -42,19 +42,26 @@ body {
 
 /* Imagen del título */
 #title-image {
-  display: block; /* Mantiene la imagen en su propia línea */
+  display: block; /* Permite que la imagen ocupe su propia línea */
+  float: left; /* Alinea la imagen a la izquierda */
+  margin: 0 20px 20px 0; /* Añade espacio a la derecha y debajo de la imagen */
   height: 200px; /* Conserva el tamaño original */
-  padding-bottom: 20px; /* Añade espacio debajo de la imagen */
+}
+
+/* Contenedor para centrar el texto debajo de la imagen */
+#text-container {
+  overflow: hidden; /* Asegura que el texto no se superponga con la imagen flotante */
+  text-align: center; /* Centra el contenido dentro del contenedor */
+  clear: both; /* Garantiza que el texto esté debajo de la imagen flotante */
 }
 
 /* Texto de bienvenida */
 #welcome {
   text-align: center; /* Centra el texto horizontalmente */
   margin: 0 auto; /* Centra el contenedor del texto */
-  line-height: 1.6; /* Mejora la separación entre líneas */
-  max-width: 800px; /* Limita el ancho del texto */
-  padding-top: 20px; /* Añade un poco de espacio encima */
-  clear: both; /* Asegura que el texto quede debajo de la imagen */
+  line-height: 1.6; /* Mejora el espaciado entre líneas */
+  max-width: 800px; /* Limita el ancho del texto para mantenerlo compacto */
+  padding-top: 20px; /* Espacio adicional para separar del contenedor */
 }
 
 /* Lema */
@@ -62,9 +69,8 @@ body {
   text-align: center; /* Centra el texto del lema */
   margin: 20px auto; /* Espaciado con los elementos circundantes */
   line-height: 1.6; /* Mejora la separación entre líneas */
-  max-width: 800px; /* Limita el ancho del texto */
+  max-width: 800px; /* Limita el ancho del lema */
 }
-
 #logo {
   height: 80px;
 }
