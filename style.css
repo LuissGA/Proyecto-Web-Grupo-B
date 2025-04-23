@@ -40,19 +40,22 @@ body {
   left: 100px;
 }
 
+/* Imagen del título */
 #title-image {
   display: block; /* Mantiene la imagen en su propia línea */
   margin: 0 auto; /* Centra la imagen horizontalmente */
   height: 200px; /* Conserva el tamaño original */
+  padding-bottom: 20px; /* Añade espacio debajo de la imagen */
 }
 
 /* Texto de bienvenida */
 #welcome {
   text-align: center; /* Centra el texto horizontalmente */
-  margin: 20px auto; /* Espacio vertical para separar elementos */
+  margin: 0 auto; /* Centra el contenedor del texto */
   line-height: 1.6; /* Mejora la separación entre líneas */
   max-width: 800px; /* Limita el ancho del texto */
-  clear: both; /* Asegura que el texto esté debajo de la imagen */
+  padding-top: 20px; /* Añade un poco de espacio encima */
+  clear: both; /* Asegura que el texto quede debajo de la imagen */
 }
 
 /* Lema */
@@ -60,6 +63,7 @@ body {
   text-align: center; /* Centra el texto del lema */
   margin: 20px auto; /* Espaciado con los elementos circundantes */
   line-height: 1.6; /* Mejora la separación entre líneas */
+  max-width: 800px; /* Limita el ancho del texto */
 }
 
 #logo {
