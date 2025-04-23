@@ -42,34 +42,34 @@ body {
 
 /* Imagen del título */
 #title-image {
-  display: block; /* Permite que la imagen ocupe su propia línea */
-  float: left; /* Alinea la imagen a la izquierda */
-  margin: 0 20px 20px 0; /* Añade espacio a la derecha y debajo de la imagen */
-  height: 200px; /* Conserva el tamaño original */
+  display: block; 
+  float: left; 
+  margin: 0 20px 20px 0;
+  height: 200px;
 }
 
 /* Contenedor para centrar el texto debajo de la imagen */
 #text-container {
-  overflow: hidden; /* Asegura que el texto no se superponga con la imagen flotante */
-  text-align: center; /* Centra el contenido dentro del contenedor */
-  clear: both; /* Garantiza que el texto esté debajo de la imagen flotante */
+  overflow: hidden; 
+  text-align: center; 
+  clear: both; 
 }
 
-/* Texto de bienvenida */
+
 #welcome {
-  text-align: center; /* Centra el texto horizontalmente */
-  margin: 0 auto; /* Centra el contenedor del texto */
-  line-height: 1.6; /* Mejora el espaciado entre líneas */
-  max-width: 800px; /* Limita el ancho del texto para mantenerlo compacto */
-  padding-top: 20px; /* Espacio adicional para separar del contenedor */
+  text-align: center; 
+  margin: 0 auto;
+  line-height: 1.6; 
+  max-width: 800px; 
+  padding-top: 20px; 
 }
 
 /* Lema */
 #lema {
-  text-align: center; /* Centra el texto del lema */
-  margin: 20px auto; /* Espaciado con los elementos circundantes */
-  line-height: 1.6; /* Mejora la separación entre líneas */
-  max-width: 800px; /* Limita el ancho del lema */
+  text-align: center; 
+  margin: 20px auto; 
+  line-height: 1.6;
+  max-width: 800px; 
 }
 #logo {
   height: 80px;
