@@ -50,19 +50,20 @@ body {
 }
 
 
+/* Texto de bienvenida */
 #welcome {
-  text-align: center; 
-  padding: 20px; 
-  font-size: 25px;
-  margin: 0 auto; 
-  line-height: 1.6; 
+  text-align: center; /* Centra el texto */
+  font-size: 25px; /* Mantiene el tamaño original */
+  margin: 20px auto; /* Espacio entre la imagen y el lema */
+  line-height: 1.6; /* Mejora la separación entre líneas */
+  max-width: 800px; /* Limita el ancho del texto sin alterar proporciones */
 }
 
-
+/* Lema */
 #lema {
-  text-align: center;
-  margin: 20px auto;
-  line-height: 1.6;
+  text-align: center; /* Centra el texto del lema */
+  margin: 20px auto; /* Espaciado con los elementos circundantes */
+  line-height: 1.6; /* Mejora la separación entre líneas */
 }
 
 #foto1, #foto2 {
