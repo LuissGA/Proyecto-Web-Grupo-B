@@ -51,15 +51,11 @@ body {
 /* Texto de bienvenida */
 #welcome {
   text-align: center; /* Centra el texto horizontalmente */
-  margin: 20px 0; /* Espacio vertical para separar elementos */
+  margin: 20px auto; /* Espacio vertical entre elementos */
   line-height: 1.6; /* Mejora la separación entre líneas */
-  clear: left; /* Asegura que el texto no se superponga con la imagen */
+  max-width: 600px; /* Limita el ancho del texto para alinearlo mejor */
+  clear: left; /* Asegura que el texto quede debajo de la imagen */
 }
-
-#logo {
-  height: 80px;
-}
-
 
 /* Lema */
 #lema {
@@ -67,6 +63,12 @@ body {
   margin: 20px auto; /* Espaciado con los elementos circundantes */
   line-height: 1.6; /* Mejora la separación entre líneas */
 }
+
+#logo {
+  height: 80px;
+}
+
+
 
 #foto1, #foto2 {
   float: right;
