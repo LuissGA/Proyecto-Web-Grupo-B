@@ -1,8 +1,3 @@
-@font-face {
-  font-family: 'OuterWildsFont';
-  src: url('Font/OUTERWILDSFONT.ttf') format('truetype');
-}
-
 header {
   height: 450px;
   background-color: black;
@@ -15,7 +10,7 @@ header {
 body {
   background-image: url("Fotos/Fondo.png");
   background-size: height=500%;
-  font-family: 'OuterWildsFont', Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 .input {
@@ -40,42 +35,24 @@ body {
   left: 100px;
 }
 
-/* Imagen del título */
 #title-image {
-  display: block; 
-  float: left; 
-  margin: 0 20px 20px 0;
   height: 200px;
+  padding: 20px;
 }
 
-/* Contenedor para centrar el texto debajo de la imagen */
-#text-container {
-  overflow: hidden; 
-  text-align: center; 
-  clear: both; 
-}
-
-
-#welcome {
-  text-align: center; 
-  margin: 0 auto;
-  line-height: 1.6; 
-  max-width: 800px; 
-  padding-top: 20px; 
-}
-
-/* Lema */
-#lema {
-  text-align: center; 
-  margin: 20px auto; 
-  line-height: 1.6;
-  max-width: 800px; 
-}
 #logo {
   height: 80px;
 }
 
+#welcome{
+  text-align: center;
+  padding: 0px 50px;
+  font-size: 25px;
+}
 
+#lema {
+  text-align: center;
+}
 
 #foto1, #foto2 {
   float: right;
@@ -114,7 +91,7 @@ DL {
 }
 
 * {
-  font-family: 'OuterWildsFont', 'Space Mono', monospace;
+  font-family: 'Space Mono', monospace;
   color: whitesmoke;
 }
 
