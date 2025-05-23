@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Outer Wilds</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+  <header>
+    <form>
+      <label for="usuario">Usuario</label>
+      <input class="input" type="text" name="usuario" id="usuario" placeholder="Usuario" />
+      <label for="contraseña">Contraseña</label>
+      <input class="input" type="password" name="contraseña" id="contraseña" placeholder="Contraseña" />
+      <button id="login-button" type="submit">Iniciar Sesión</button>
+    </form>  
+    <div class="container">
+      <label>
+        <input class="play-btn" type="checkbox" id="audioControl" title="Toggle background music" aria-label="Toggle background music">
+        <div class="play-icon"></div>
+        <div class="pause-icon"></div>
+      </label>
+      <audio id="backgroundMusic" loop>
+        <source src="Cancion/OuterWilds.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+      </audio>
+    </div>
+
+    <img src="Fotos/Empresalogo.png" alt="Empresalogo" id="Empresalogo">
+  </header>
+  <nav class="navbar">
+    <ul nav class="navbar">
+      <li><a href="#welcome">Inicio</a></li>
+      <li><a href="#Textovid">Donaciones</a></li>
+      <li><a href="#contribuciones">Contribuciones</a></li>
+      <li><a href="#objetivos">Objetivos</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#disqus_thread">Comentarios</a></li>
+      <li><a href="#equipo">Equipo</a></li>
+    </ul>
+  </nav>
+  <main>
+    <img src="Fotos/Titulo.png" alt="Titulofoto" id="title-image">
+    <h1 id="welcome">Bienvenido al Sistema Solar de OuterWilds <br>
+      donde podrás explorar libremente un universo completamente nuevo como un Hatchling. 
+      <br>Pero, ¿no es extraño?
+      El tiempo no pasa como debería...</h1>
+    <!-- Lema si se nos ocurre algo mejor que esto  -->
+    <section><h2 id="lema">La curiosidad es tu única herramienta y el final es solo el comienzo.</h2></section>
+    <section>
+      <h1 id="nominado">Prepárate para descubrir la intrincada historia de una civilización misteriosamente desaparecida.</h1>
+    </section>
+    <section> 
+      <div><h1>Puntos fuertes</h1>
+      <ul>
+        <li>Amplio sistema solar con inmensidad de secretos que descubrir.</li><br>
+        <li>Mundo abierto con libertad total de principio a fin.</li><br>
+        <li>Carismáticos compañeros espaciales con los que compartir tus vivencias.</li> 
+      </ul>
+      </div>
+
+      <aside>
+        <img src="Fotos/Foto1.webp" alt="Foto1" id="foto1"/>
+        <div><img src="Gifs/gif1.gif" alt="gif1" class="gif"/></div>
+      </aside>
+    </section>
+    <section>
+      <div>
+        <h1>Mecanicas de juego</h1>
+        <ul>
+          <li>Exploración de un mundo misterioso lleno de información antigua.</li><br>
+          <li>Resolución de puzles crípticos.</li><br>
+          <li>Descubrimiento de un proyecto masivo, tal vez jamás llevado a cabo.</li>
+        </ul>
+      </div>
+      <aside>
+        <img src="Fotos/Foto2.webp" alt="Foto2" id="foto2"/>
+        <div><img src="Gifs/gif2.gif" alt="gif2" class="gif"/></div>
+      </aside>
+    </section>
+
+    <section>
+      <div class="video-container">
+        <video width="100%" height="500" controls>
+          <source src="Videos/Video.mp4" type="video/mp4">
+          Tu navegador no soporta el elemento de video.
+        </video>
+      </div>
+    </section>
+    <section id="Textovid"><p>El tráiler de Outer Wilds te sumerge en un misterio cósmico de exploración y soledad. Planetas únicos y un bucle 
+      temporal inevitable te desafían a desvelar los secretos de una civilización ancestral. 
+      La música folk-etéreo refuerza una atmósfera de asombro y melancolía.</p></section>
+    <section><button class="btn">¿ QUIERES CONTRIBUIR DONANDONOS ?</button></section>
+    <section id="contribuciones">
+      <h2>Niveles de Contribución</h2>
+      <div class="contribucion-tier">
+        <h3>Explorador Novato - 10€</h3>
+        <p>Acceso anticipado a la beta cerrada, nombre en los créditos.</p>
+        <p>Fecha de entrega estimada: Diciembre 2025</p>
+      </div>
+      <div class="contribucion-tier">
+        <h3>Viajero Interestelar - 25€</h3>
+        <p>Todo lo del nivel anterior + Banda sonora digital + Libro de arte digital.</p>
+        <p>Fecha de entrega estimada: Enero 2026</p>
+      </div>
+      <div class="contribucion-tier">
+        <h3>Pionero Cósmico - 50€</h3>
+        <p>Todo lo de los niveles anteriores + Copia digital del juego final + Acceso exclusivo al servidor de Discord para desarrolladores.</p>
+        <p>Fecha de entrega estimada: Marzo 2026</p>
+      </div>
+    </section>
+
+    <section id="objetivos">
+      <h2>Objetivos de Financiación</h2>
+      <div class="objetivo-tier">
+        <h3>Objetivo Mínimo - 10,000€</h3>
+        <p>Con esta cantidad, podremos completar el desarrollo principal del juego y lanzarlo en la fecha prevista.</p>
+      </div>
+      <div class="objetivo-tier">
+        <h3>Objetivo Extra 1 - 15,000€</h3>
+        <p>Añadiremos un nuevo sistema solar explorable con sus propios misterios y desafíos.</p>
+      </div>
+      <div class="objetivo-tier">
+        <h3>Objetivo Extra 2 - 20,000€</h3>
+        <p>Incluiremos doblaje profesional para los personajes principales en inglés y español.</p>
+      </div>
+      <div class="objetivo-tier">
+        <h3>Objetivo Extra 3 - 25,000€</h3>
+        <p>Desarrollaremos un modo multijugador cooperativo para explorar el universo con amigos.</p>
+      </div>
+    </section>
+    
+    <!-- faq  -->
+    <section id="faq">
+      <h2>Preguntas Frecuentes</h2>
+      <div class="faq-container">
+        <details class="faq-card">
+          <summary>¿Cómo puedo unirme al juego?</summary>
+          <p>Puedes unirte al juego en cuanto se haga el lanzamiento de la beta cerrada. Haz tu contribución en la sección de "Contribuciones" para obtener acceso anticipado.</p>
+        </details>
+    
+        <details class="faq-card">
+          <summary>¿Cuál es la fecha de lanzamiento del juego?</summary>
+          <p>La fecha de lanzamiento prevista es para diciembre de 2025, aunque podría retrasarse dependiendo de la financiación.</p>
+        </details>
+    
+        <details class="faq-card">
+          <summary>¿Puedo contribuir con más de 50€?</summary>
+          <p>¡Sí! Puedes contribuir con cualquier cantidad y recibirás recompensas adicionales según el nivel de contribución.</p>
+        </details>
+      </div>
+    </section>
+    
+    <section><img src="Fotos/Textosdecorativos.png" alt="Textosdecorativos" id="decoracion2"></section>
+    <section id="disqus_thread">
+      <script>
+          /**
+          *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+          *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+          /*
+          var disqus_config = function () {
+          this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+          };
+          */
+          (function() { // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          s.src = 'https://https-felipeowenzz-github-io-proyecto-web-grupo-b.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+          })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
+    <section id="equipo">
+      <h1>Más sobre nosotros</h1>
+      <h2>Equipo</h2>
+      <div class="integrante">
+        <h3>[Felipe]</h3>
+        <p><strong>Tarea:</strong> [Programación html]</p>
+        <p><strong>Rol:</strong> [Programador]</p>
+      </div>
+      <div class="integrante">
+        <h3>[Luis]</h3>
+        <p><strong>Tarea:</strong> [Programación html]</p>
+        <p><strong>Rol:</strong> [Programador]</p>
+      </div>
+      <div class="integrante">
+        <h3>[Cristina]</h3>
+        <p><strong>Tarea:</strong> [Musica/Texto de la pagina]</p>
+        <p><strong>Rol:</strong> [Artista musica y guionista]</p>
+      </div>
+      <div class="integrante">
+        <h3>[Luciana]</h3>
+        <p><strong>Tarea:</strong> [Pechakucha/Estructura de la pagina]</p>
+        <p><strong>Rol:</strong> [Escritora]</p>
+      </div>
+      <div class="integrante">
+        <h3>[Arturo]</h3>
+        <p><strong>Tarea:</strong> [Editor de video]</p>
+        <p><strong>Rol:</strong> [Diseñador 3D]</p>
+      </div>
+      <div class="integrante">
+        <h3>[Rodrigo]</h3>
+        <p><strong>Tarea:</strong> [Diseñador de fuente]</p>
+        <p><strong>Rol:</strong> [Diseñador de escenarios]</p>
+      </div>
+      <aside><img src="Fotos/Logo.png" alt="Logo" id="logo"></aside>
+    </section>
+    <section><p>ATENCIÓN: Esta página simula la campaña de microfinanciación de un videojuego ficticio y no
+      representa un producto real. Práctica de Multimedia, 1º GDDV - Curso 24/25
+      (Móstoles/Quintana), URJC. La URJC no se hace responsable del contenido expuesto por el
+      autor.
+      </p>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="social-icons">
+        <span>Siguenos en nuestras redes sociales:</span>
+        <span class="icon"><img src="Fotos/bskylogo.png" alt="bskylogo"></span>
+        <span class="icon"><img src="Fotos/faceboocklogo.png" alt="faceboocklogo"></span>
+        <span class="icon"><img src="Fotos/xlogo.png" alt="xlogo"></span>
+        <span class="icon"><img src="Fotos/linkedin.png" alt="linkedin"></span>
+        <span class="icon"><img src="Fotos/instagramlogo.png" alt="instagramlogo"></span>
+      </div>
+      <div class="official-link">
+        <span>Outer Wilds página oficial</span>
+      </div>
+      <div class="legal-links">
+        <span>Politica de privacidad</span>
+        <span>Terminos de Uso</span>
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const audioControl = document.getElementById('audioControl');
+      const backgroundMusic = document.getElementById('backgroundMusic');
+      
+      audioControl.addEventListener('change', function() {
+        if (this.checked) {
+          backgroundMusic.play();
+        } else {
+          backgroundMusic.pause();
+        }
+      });
+    });
+  </script>
+  <script id="dsq-count-scr" url="//https-felipeowenzz-github-io-proyecto-web-grupo-b.disqus.com/count.js" async></script>
+</body>
+</html>
