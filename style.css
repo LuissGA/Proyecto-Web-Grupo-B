@@ -3,15 +3,20 @@
   src: url('Font/OUTERWILDSFONT.ttf') format('truetype');
 }
 
+/* --- MOBILE FIRST STYLES --- */
 header {
   background-color: black;
   background-image: url("Fotos/Banner.jpg");
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
-  position: relative; 
   padding: 10px;
-  min-height: 150px; 
+  min-height: 100px; /* Adjusted for flex content */
+  /* ---- NEW: Flexbox for mobile header ---- */
+  display: flex;
+  justify-content: space-between; /* Logo left, form right */
+  align-items: flex-start; /* Align items to the top of the flex container */
+  position: relative; /* Keep for any absolutely positioned children if needed later, but logo/form are static now */
 }
 
 body {
@@ -24,731 +29,203 @@ body {
 }
 
 #Empresalogo {
-  position: absolute;
-  top: 20px;
-  left: 15px;
-  height: 45px;
-  z-index: 5;
+  position: static; /* Reset from absolute if it was */
+  height: 40px;   /* Adjusted size for mobile */
+  margin-top: 5px; /* Small top margin for alignment */
+  flex-shrink: 0; /* Prevent logo from shrinking */
 }
 
 header form {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  width: auto;
-  max-width: 180px; 
+  position: static; /* Reset from absolute */
   text-align: right;
-  z-index: 5;
+  max-width: 170px; /* Max width for the form block */
+  flex-shrink: 1; /* Allow form to shrink if space is tight, but logo won't */
+  margin-left: 10px; /* Space between logo and form */
 }
 
 header form label {
   display: block;
   margin-bottom: 2px;
-  font-size: 0.8em;
+  font-size: 0.75em; /* Further reduced for tight space */
   color: #f0f0f0;
 }
 
 .input {
   border: none;
   outline: none;
-  border-radius: 10px; 
-  padding: 6px;
+  border-radius: 8px; /* Slightly smaller radius */
+  padding: 5px;      /* Reduced padding */
   background-color: #ccc;
-  box-shadow: inset 1px 3px 7px rgba(0,0,0,0.3);
+  box-shadow: inset 1px 2px 5px rgba(0,0,0,0.3);
   transition: 300ms ease-in-out;
   color: black;
-  margin-bottom: 5px;
-  width: 100%; 
+  margin-bottom: 4px; /* Reduced margin */
+  width: 100%;
   box-sizing: border-box;
-  font-size: 0.9em;
+  font-size: 0.85em;  /* Reduced font size */
 }
 
 .input:focus {
   background-color: white;
-  transform: scale(1.03);
+  transform: scale(1.02); /* Reduced scale */
 }
 
 #login-button {
   background: linear-gradient(45deg, #ff6347, #ff8c69);
   color: white;
   border: none;
-  padding: 7px 12px;
-  border-radius: 20px;
+  padding: 6px 10px; /* Reduced padding */
+  border-radius: 18px; /* Slightly smaller radius */
   font-weight: bold;
   cursor: pointer;
   transition: all 0.4s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
-  margin-top: 3px;
-  font-size: 0.85em;
+  margin-top: 2px; /* Reduced margin */
+  font-size: 0.8em; /* Reduced font size */
   float: right;
 }
 
 #login-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(255, 99, 71, 0.3);
+  box-shadow: 0 3px 6px rgba(255, 99, 71, 0.3);
   background: linear-gradient(45deg, #ff8c69, #ff6347);
 }
-
-#login-button:active {
-  transform: translateY(1px);
-}
-
+#login-button:active { transform: translateY(1px); }
 #login-button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
+  content: ""; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
   transition: 0.5s;
 }
-
-#login-button:hover::before {
-  left: 100%;
-}
+#login-button:hover::before { left: 100%; }
 
 .container { /* Music player */
-  position: absolute;
-  top: 85px; 
-  right: 15px; 
-  width: 45px;
-  height: 45px;
+  position: fixed; /* Switched to fixed for viewport relativity */
+  top: 15px;
+  right: 15px;
+  width: 40px; /* Slightly smaller */
+  height: 40px;/* Slightly smaller */
   z-index: 1001;
 }
 
 .play-btn {
-  position: absolute;
-  appearance: none;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: conic-gradient(#ff6347, #ff6347);
-  cursor: pointer;
-  outline: none;
+  position: absolute; appearance: none; width: 100%; height: 100%;
+  border-radius: 50%; background: conic-gradient(#ff6347, #ff6347);
+  cursor: pointer; outline: none;
 }
-
 .play-btn::before {
-  content: "";
-  position: absolute;
-  width: 90%; 
-  height: 90%;
-  background-color: #000;
-  border-radius: 50%;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  content: ""; position: absolute; width: 90%; height: 90%;
+  background-color: #000; border-radius: 50%;
+  left: 50%; top: 50%; transform: translate(-50%, -50%);
 }
-
 .play-icon {
-  position: absolute;
-  width: 22px; 
-  height: 22px;
-  left: 60%;
-  top: 50%;
-  background-color: #ff6347;
+  position: absolute; width: 20px; height: 20px; /* Smaller icon */
+  left: 60%; top: 50%; background-color: #ff6347;
   transform: translate(-60%, -50%) rotate(90deg);
   clip-path: polygon(50% 15%, 0% 100%, 100% 100%);
-  transition: all 400ms ease-in-out;
-  cursor: pointer;
+  transition: all 400ms ease-in-out; cursor: pointer;
 }
-
-.play-btn:checked + .play-icon {
-  clip-path: polygon(0 100%, 0% 100%, 100% 100%);
-}
-
+.play-btn:checked + .play-icon { clip-path: polygon(0 100%, 0% 100%, 100% 100%); }
 .pause-icon {
-  position: absolute;
-  width: 22px;
-  height: 22px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  cursor: pointer;
+  position: absolute; width: 20px; height: 20px; /* Smaller icon */
+  left: 50%; top: 50%; transform: translate(-50%, -50%); cursor: pointer;
 }
-
 .pause-icon::before, .pause-icon::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 100%;
-  background-color: #ff6347;
+  content: ""; position: absolute; width: 0%; height: 100%; background-color: #ff6347;
 }
 .pause-icon::before { left: 0; }
 .pause-icon::after { right: 0; }
-
-
-.play-btn:checked ~ .pause-icon::before,
-.play-btn:checked ~ .pause-icon::after {
-  animation: reveal 300ms ease-in-out 1;
-  animation-fill-mode: forwards;
+.play-btn:checked ~ .pause-icon::before, .play-btn:checked ~ .pause-icon::after {
+  animation: reveal 300ms ease-in-out 1; animation-fill-mode: forwards;
 }
 .play-btn:checked ~ .pause-icon::before { animation-delay: 350ms; }
-.play-btn:checked ~ .pause-icon::after { animation-delay: 500ms; } /* Staggered */
-
+.play-btn:checked ~ .pause-icon::after { animation-delay: 500ms; }
 
 @keyframes borderAnimate {
   0% { transform: rotate(0); background: conic-gradient(#ff6347, transparent 20%); }
   80% { background: conic-gradient(#ff6347, transparent 90%); }
   100% { transform: rotate(360deg); background: conic-gradient(#ff6347, #ff6347); }
 }
+@keyframes reveal { 0% { width: 0; } 100% { width: 35%; } }
 
-@keyframes reveal {
-  0% { width: 0; }
-  100% { width: 35%; }
+/* --- Navigation Bar - Mobile --- */
+nav.navbar {
+    background-color: #333;
+    position: sticky;
+    top: 0;
+    z-index: 900;
+    padding: 0; /* Reset padding */
+    overflow: hidden; /* To ensure no weird spacing from the child ul */
+}
+
+nav.navbar > ul.navbar { /* Direct child ul with class navbar */
+    list-style-type: none;
+    margin: 0;
+    padding: 3px 0px; /* Minimal vertical padding, no horizontal for full scroll bleed */
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: hidden; /* Prevent vertical scroll */
+    white-space: nowrap; /* Keep all items on a single line */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    background-color: #333; /* Ensure UL has background */
+}
+
+nav.navbar > ul.navbar > li {
+    flex: 0 0 auto; /* Don't grow, don't shrink, auto basis */
+    margin: 0; /* Reset any default li margin */
+}
+
+nav.navbar > ul.navbar > li > a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 8px 12px; /* Adjusted padding for touchability in a row */
+    text-decoration: none;
+    transition: background-color 0.3s;
+    font-size: 0.85em; /* Slightly smaller for more items to be visible */
+    border-bottom: none;
+}
+
+nav.navbar > ul.navbar > li > a:hover {
+    background-color: #111;
 }
 
 
+/* --- General Content Styles (mostly unchanged, verify font sizes if needed) --- */
 #title-image {
-  height: auto;
-  max-height: 150px;
-  width: auto;
-  max-width: 80%;
-  padding: 20px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  height: auto; max-height: 120px; /* Slightly smaller on mobile */
+  width: auto; max-width: 70%; padding: 15px;
+  display: block; margin-left: auto; margin-right: auto;
 }
-
-#logo {
-  height: 60px;
-  display: block;
-  margin: 10px auto;
-}
-
-#welcome {
-  text-align: center;
-  padding: 10px 20px;
-  font-size: 20px;
-}
-
-#lema {
-  text-align: center;
-  font-size: 18px;
-  padding: 10px 20px;
-}
+#logo { height: 50px; display: block; margin: 10px auto; }
+#welcome { text-align: center; padding: 10px 15px; font-size: 18px; }
+#lema { text-align: center; font-size: 16px; padding: 10px 15px; }
 
 #foto1, #foto2 {
-  float: none;
-  display: block;
-  margin: 10px auto;
-  max-width: 100%;
-  height: auto;
+  float: none; display: block; margin: 10px auto;
+  max-width: 90%; height: auto;
 }
+#foto1 { max-height: 160px; }
+#foto2 { max-height: 170px; }
 
-#foto1 { max-height: 180px; }
-#foto2 { max-height: 190px; }
-
-#decoracion1, #decoracion2 {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 10px auto;
-}
-
-#decoracion1 { width: 100%; max-width: 1000px; max-height: 400px; }
-#decoracion2 { width: 100%; max-width: 1000px; }
-
-.gif {
-  height: 120px;
-  display: block;
-  margin: 10px auto;
-}
-
+#decoracion1, #decoracion2 { max-width: 100%; height: auto; display: block; margin: 10px auto; }
+.gif { height: 100px; display: block; margin: 10px auto; }
 dl { text-align: center; }
-
-* {
-  font-family: 'OuterWildsFont', 'Space Mono', monospace;
-  color: whitesmoke;
-  box-sizing: border-box;
-}
+* { font-family: 'OuterWildsFont', 'Space Mono', monospace; color: whitesmoke; box-sizing: border-box; }
 
 h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), text-shadow 0.5s cubic-bezier(0.23, 1, 0.32, 1), color 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-  margin: 10px 0;
+  margin: 8px 0; font-size: 1.5em; /* Adjusted base heading size for mobile */
 }
+h1 { font-size: 1.6em; }
+h2 { font-size: 1.4em; }
+h3 { font-size: 1.2em; }
 
 h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
-  transform: scale(1.07);
-  color: #ff6347;
-  text-shadow: 0 0 16px #ffb347, 0 0 8px #ff6347;
-  cursor: default;
+  transform: scale(1.05); color: #ff6347;
+  text-shadow: 0 0 12px #ffb347, 0 0 6px #ff6347; cursor: default;
 }
-
-button { /* General button styling, might be overridden */
-  background-color: #0c0c0c;
-  border: none;
-  color: whitesmoke;
-}
-
-
-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  max-width: 1000px;
-  margin: 0 auto 20px auto;
-  background-color: rgba(14, 13, 13, 0.8);
-}
-
-section > div, section > aside {
-  width: 100%;
-  margin-bottom: 15px;
-}
-
-section > div:last-child, section > aside:last-child {
-  margin-bottom: 0;
-}
-
-aside {
-  float: none;
-  text-align: center;
-}
-aside img, aside .gif {
-  filter: brightness(1.7);
-  max-width: 100%;
-  height: auto;
-}
-
-section ul {
-  padding-left: 20px;
-  list-style-position: inside;
-  text-align: left;
-}
-
-section ul li {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.video-container {
-  width: 100%;
-  margin: 20px 0;
-  display: flex;
-  justify-content: center;
-}
-
-.video-container video {
-  max-width: 100%;
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
-
-#contribuciones, #objetivos, #faq, #equipo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin-top: 20px;
-  padding: 20px 10px;
-}
-
-#contribuciones h2, #objetivos h2, #faq h2, #equipo h2 {
-  margin-bottom: 20px;
-  color: #ffb347;
-  font-size: 1.8em;
-}
-
-.contribucion-tier, .objetivo-tier, .integrante {
-  background-color: rgba(30, 30, 30, 0.9);
-  border: 1px solid #444;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 5px;
-  width: 90%;
-  max-width: 500px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-}
-
-.contribucion-tier h3, .objetivo-tier h3, .integrante h3 {
-  color: #ff6347;
-  margin-bottom: 10px;
-  font-size: 1.3em;
-}
-
-.contribucion-tier p, .objetivo-tier p, .integrante p {
-  font-size: 0.9em;
-  line-height: 1.4;
-  color: #ccc;
-}
-
-.contribucion-tier p:last-child {
-  margin-top: 8px;
-  font-style: italic;
-  font-size: 0.85em;
-  color: #aaa;
-}
-
-.faq-container {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  width: 90%;
-  max-width: 500px;
-}
-
-.faq-card {
-  background: linear-gradient(145deg, #2c2c2c, #1a1a1a);
-  border: 1px solid #444;
-  border-radius: 12px;
-  padding: 0 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-  transition: all 0.3s ease;
-}
-
-.faq-card summary {
-  cursor: pointer;
-  padding: 15px 0;
-  color: #ff6347;
-  font-weight: bold;
-  font-size: 1.0em;
-  position: relative;
-  list-style: none;
-  text-align: left;
-}
-
-.faq-card summary::after {
-  content: "▼";
-  position: absolute;
-  right: 10px;
-  transition: transform 0.3s ease-in-out;
-}
-
-.faq-card[open] summary::after {
-  transform: rotate(180deg);
-}
-
-.faq-card p {
-  color: #e0e0e0;
-  padding-bottom: 15px;
-  margin: 0;
-  font-size: 0.9em;
-  line-height: 1.5;
-  text-align: left;
-}
-
-nav.navbar {
-  padding: 0;
-  background-color: #333;
-  position: sticky;
-  top: 0;
-  z-index: 900;
-  overflow: hidden; 
-}
-ul.navbar { /* The <ul> inside the <nav> */
-  list-style-type: none;
-  margin: 0;
-  padding: 2px 0; /* Minimal padding for scrollable area */
-  display: flex;
-  flex-direction: row;
-  overflow-x: auto;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch; 
-}
-
-ul.navbar li {
-  display: inline-block; 
-  flex-shrink: 0;
-}
-
-ul.navbar li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 8px 12px; /* Reduced padding for horizontal items */
-  text-decoration: none;
-  transition: background-color 0.3s;
-  font-size: 0.9em; /* Slightly smaller font for more items */
-  border-bottom: none;
-}
-
-ul.navbar li a:hover {
-  background-color: #111;
-}
-
-
-.btn {
-  background-color: #000000;
-  padding: 12px 25px;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  cursor: pointer;
-  border-radius: 10px;
-  border: 2px dashed #ffffff;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  transition: .4s;
-  display: block;
-  margin: 20px auto;
-  font-size: 1rem;
-}
-
-.btn span:last-child { display: none; }
-.btn:hover { transition: .4s; border: 2px dashed #000000; background-color: #fff; color: #000000; }
-.btn:active { background-color: #ff5e00; }
-
-footer {
-  background-color: #000000;
-  color: #ccc;
-  padding: 20px 10px;
-  margin-top: 30px;
-}
-
-.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-}
-
-.social-icons,
-.official-link,
-.legal-links span {
-  background-color: #1f1f1f;
-  padding: 10px 15px;
-  text-align: center;
-  width: auto;
-  max-width: 90%;
-  border-radius: 5px;
-}
-
-.social-icons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  pointer-events: auto;
-}
-
-.social-icons span:first-child {
-  margin-right: 0;
-  margin-bottom: 5px;
-  font-size: 0.9em;
-  width: 100%;
-}
-
-.social-icons .icon {
-  font-size: 1.5em;
-  color: #fff;
-  margin: 0 5px;
-  display: inline-block;
-  transition: transform 0.3s ease, filter 0.3s ease;
-  cursor: pointer;
-  pointer-events: auto;
-}
-
-.social-icons .icon img { height: 24px; width: 24px; }
-.social-icons .icon:hover { transform: scale(1.2); filter: brightness(1.5); }
-
-.official-link {
-  padding: 12px 20px;
-  font-size: 1.0em;
-  color: #fff;
-  text-decoration: underline;
-  width: auto;
-  max-width: 90%;
-  margin: 10px 0;
-  display: inline-block;
-  transition: transform 0.3s ease, color 0.3s ease;
-  cursor: pointer;
-  pointer-events: auto;
-}
-
-.official-link:hover { transform: scale(1.05); color: #ffb347; }
-
-.legal-links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  width: 100%;
-}
-
-.legal-links span {
-  flex-grow: 0;
-  width: auto;
-  max-width: 90%;
-  color: #fff;
-  text-decoration: underline;
-  display: inline-block;
-  transition: transform 0.3s ease, color 0.3s ease;
-  cursor: pointer;
-  pointer-events: auto;
-}
-
-.legal-links span:hover { transform: scale(1.05); color: #ffb347; }
-#disqus_thread { padding: 20px 10px; }
-
-
-@media (min-width: 769px) {
-  header {
-    height: 450px; /* Desktop header height */
-    padding-bottom: 0;
-    min-height: 0; /* Reset min-height for desktop */
-  }
-
-  header form {
-    position: static; /* Reset from absolute */
-    text-align: right;
-    padding: 20px;
-    width: auto; /* Reset width */
-    max-width: none; /* Reset max-width */
-  }
-  header form label {
-    display: inline; /* Desktop: labels inline */
-    margin-right: 5px;
-    font-size: 1em; /* Restore original font size */
-  }
-  header form .input {
-    width: auto; /* Desktop: inputs auto width */
-    margin-right: 10px;
-    margin-bottom: 0;
-    display: inline-block; /* Desktop: inputs inline */
-    padding: 0.5em; /* Restore original padding */
-    font-size: 1em; /* Restore original font size */
-    border-radius: 15px; /* Restore original border-radius */
-  }
-  #login-button {
-    margin-top: 0;
-    float: none; /* Reset float */
-    display: inline-block; /* Desktop: button inline */
-    padding: 10px 25px; /* Restore original padding */
-    font-size: 1em; /* Restore original font size */
-    border-radius: 25px; /* Restore original border-radius */
-  }
-
-  #Empresalogo {
-    position: relative; /* Desktop positioning */
-    top: -68px;
-    left: 100px;
-    height: auto; /* Let original image height dictate or set specific desktop height */
-    z-index: auto;
-  }
-  
-  .container { /* Music player desktop */
-    position: fixed; /* Keep it fixed */
-    top: 80px;
-    left: auto; /* Reset mobile positioning if it was different */
-    right: auto; /* Reset mobile positioning if it was different */
-    /* Default left positioning (not explicitly set, so it stays near left based on HTML order/CSS if no 'left' is given) */
-    /* Or be explicit: left: 20px; */
-    width: 80px;
-    height: 80px;
-    z-index: 1000; /* Ensure it's above most things but potentially below modal popups */
-  }
-  .play-icon { width: 40px; height: 40px; left: 63%; top: 53%; }
-  .pause-icon { width: 40px; height: 40px; left: 53%; top: 53%; }
-
-
-  #title-image {
-    height: 200px;
-    max-height: none;
-    width: auto;
-    max-width: none;
-    padding: 20px;
-    display: inline-block;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  
-  #logo {
-    height: 80px;
-    display: inline;
-    margin: 0;
-  }
-
-  #welcome { padding: 0px 50px; font-size: 25px; }
-  #lema { font-size: normal; padding: 0px 50px; }
-
-  section {
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding: 0px 100px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-  
-  section#Textovid, section#lema, section#nominado, section > .video-container, section > button.btn, section > img#decoracion2 {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-  }
-  section#contribuciones, section#objetivos, section#faq, section#equipo, section#disqus_thread {
-      flex-direction: column;
-      align-items: center;
-  }
-   section#equipo aside { margin-top: 20px; }
-
-  section > div { width: auto; margin-bottom: 0; }
-  section > div:not(:first-child) { text-align: left; }
-  section > aside { width: auto; margin-bottom: 0; text-align: right; }
-
-  #foto1, #foto2 { float: right; display: inline; margin: 0; max-width: none; }
-  #foto1 { height: 200px; }
-  #foto2 { height: 213px; }
-
-  .gif { height: 150px; display: inline-block; margin: 0; }
-  aside { float: right; text-align: right; }
-  aside img, aside .gif { max-width: none; }
-
-  section ul li { font-size: 30px; margin-bottom: 0; }
-  section ul { padding-left: 0; list-style-position: outside; }
-
-  .video-container video { max-width: 800px; width: 100%; height: 500px; }
-
-  nav.navbar {
-    padding: 0; /* Reset any padding if needed */
-    overflow: visible; /* Reset overflow for desktop */
-  }
-  ul.navbar { /* Desktop navbar */
-    flex-direction: row;
-    justify-content: center;
-    align-items: stretch;
-    overflow-x: visible; /* No horizontal scroll on desktop */
-    white-space: normal; /* Allow wrapping if needed, though usually not for main nav */
-    padding: 0; /* Reset padding */
-  }
-  ul.navbar li {
-    float: left; /* Original float for desktop */
-    width: auto;
-    display: list-item; /* Reset from inline-block if needed */
-    flex-shrink: 1; /* Default flex shrink */
-  }
-  ul.navbar li a {
-    padding: 8px 16px; /* Original padding */
-    font-size: 1em; /* Original font size */
-  }
-
-
-  .btn { font-size: 1.2rem; padding: 14px 40px; }
-
-  #contribuciones, #objetivos, #faq, #equipo { padding: 20px 100px; }
-  .contribucion-tier, .objetivo-tier, .integrante { width: 80%; max-width: 600px; }
-  .faq-container { width: 100%; max-width: none; }
-  .faq-card { padding: 0 20px; }
-  .faq-card summary { padding: 20px 0; font-size: 1.1em; text-align: left; }
-  .faq-card summary::after { right: 20px; }
-  .faq-card p { padding-bottom: 20px; font-size: 0.95em; text-align: left; }
-
-  footer { padding: 20px 0; margin-top: 40px; }
-  .footer-content { gap: 10px; }
-  .social-icons, .official-link, .legal-links span { padding: 10px 20px; max-width: none; }
-  .social-icons { flex-wrap: nowrap; justify-content: flex-start; }
-  .social-icons span:first-child { margin-right: 10px; margin-bottom: 0; width: auto; }
-  .social-icons .icon img { height: auto; width: auto; }
-  .official-link { padding: 15px 40px; font-size: 1.2em; width: 60%; }
-  .legal-links { flex-direction: row; justify-content: center; gap: 20px; width: 80%; }
-  .legal-links span { flex-grow: 1; max-width: none; }
-  #disqus_thread { padding: 0px 100px; padding-top: 20px; padding-bottom: 20px; }
-}
+button { background-color: #0c0c
